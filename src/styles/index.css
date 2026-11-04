@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-nashat-bg: #111714;
+  --color-nashat-gold: #B39A63;
+  --color-nashat-surface: #151E19;
+  --color-nashat-surface-elevated: #1A251F;
+}
+
+html {
+  background-color: #111714;
+  color-scheme: dark;
+}
+
+html[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+}
+
+html[dir="ltr"] {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle architectural dot grid for technical context */
+.tech-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    radial-gradient(circle, rgba(179, 154, 99, 0.08) 1px, transparent 1px);
+}
+
+.tech-subtle-lines {
+  background-image: linear-gradient(to right, rgba(179, 154, 99, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(179, 154, 99, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Custom restrained scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111714;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25332A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B39A63;
+}
+
+/* Accessibility: focus ring */
+*:focus-visible {
+  outline: 2px solid #B39A63;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
